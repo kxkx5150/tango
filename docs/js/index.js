@@ -278,21 +278,21 @@ function addEvent(){
             that.style.display = "none";
         },300)
     },false);   
-    document.getElementById("tab1").addEventListener("change",function(){
-        if(this.checked){
-            changeLevel(true,this.id);
-        }
-    });   
-    document.getElementById("tab2").addEventListener("change",function(){
-        if(this.checked){
-            changeLevel(true,this.id);
-        }
-    });   
-    document.getElementById("tab3").addEventListener("change",function(){
-        if(this.checked){
-            changeLevel(true,this.id);
-        }
-    });   
+    // document.getElementById("tab1").addEventListener("change",function(){
+    //     if(this.checked){
+    //         changeLevel(true,this.id);
+    //     }
+    // });   
+    // document.getElementById("tab2").addEventListener("change",function(){
+    //     if(this.checked){
+    //         changeLevel(true,this.id);
+    //     }
+    // });   
+    // document.getElementById("tab3").addEventListener("change",function(){
+    //     if(this.checked){
+    //         changeLevel(true,this.id);
+    //     }
+    // });   
     document.getElementById("tab4").addEventListener("change",function(){
         if(this.checked){
             changeLevel(true,this.id);
@@ -330,6 +330,26 @@ function addEvent(){
         var val = this.value.replace(/^\s+|\s+$/g, "");
         searchList(val)
     });   
+
+
+    document.getElementById("show_seikai").addEventListener("click",function(e){
+
+        var mondai = Q[MondaiIndex];
+        mondai.matigai = true;
+        document.getElementById("kotae_input").value = mondai.RightAns;
+
+
+    });   
+
+
+
+
+
+
+
+
+
+
     var touchStartX;
     var touchStartY;
     var touchMoveX;
@@ -430,7 +450,7 @@ function checkOnaziKotae(val,mondai){
     if(mondai.RightAns == val){
         kotae = mondai.RightAns;
     }
-    if(mondai.h === val){
+    if(mondai.h.toLowerCase() === val.toLowerCase()){
         kotae = mondai.RightAns;
     }
     return kotae
@@ -443,9 +463,9 @@ function changeLevel(e,id,loadflg){
     }else if(id === "tab3"){
         Q = G6;
     }else if(id === "tab4"){
-        Q = G6;
+        Q = G4;
     }else if(id === "tab5"){
-        Q = G6;
+        Q = G5;
     }else if(id === "tab6"){
         Q = G6;
     }
