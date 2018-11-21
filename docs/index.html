@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<meta name="theme-color" content="#000000">
+	    <title>英単語</title>
+	    <link rel="icon" href="img/favicon_chrome.png" sizes="192x192" />
+        <link rel="stylesheet" href="css/onsenui.css">
+        <link rel="stylesheet" href="css/dark-onsen-css-components.min.css">
+		<link href="css/index.css" rel="stylesheet">
+        <script src="js/onsenui.min.js"></script>
+		<script src="js/jquery-2.2.4.min.js"></script>
+		<script src="js/g6.js"></script>
+
+
+
+
+
+		<script src="js/index.js"></script>
+		<script src="js/hw.js"></script>
+    </head>
+    <body>
+	    <ons-tabbar var="tabbar">
+	      <ons-tab label="1" page="tab1.html" active id="onstabbar">
+	      </ons-tab>
+	      <ons-tab label="2" page="tab2.html">
+	      </ons-tab>
+	      <ons-tab label="3" page="tab3.html">
+	      </ons-tab>
+	      <ons-tab label="4" page="tab4.html">
+	      </ons-tab>
+	    </ons-tabbar>
+	    <ons-template id="tab1.html">
+	      <ons-page>
+				<div class="wrapper">
+					<div class="section-">
+					  <input class="section-radio" id="tab1" name="tab" type="radio" value="n1">
+					  <label class="section-name section-one" for="tab1">高3</label>
+					  <div class="section-content">
+
+					  </div>
+					</div>
+					<div class="section-">
+					  <input class="section-radio" id="tab2" name="tab" type="radio" value="n2">
+					  <label class="section-name section-two" for="tab2">高2</label>
+					  <div class="section-content">
+
+					  </div>
+					</div>
+					<div class="section-">
+					  <input class="section-radio" id="tab3" name="tab" type="radio" value="n3">
+					  <label class="section-name section-three" for="tab3">高1</label>
+					  <div class="section-content">
+
+					  </div>
+					</div>
+					<div class="section-">
+					  <input class="section-radio" id="tab4" name="tab" type="radio" value="n4">
+					  <label class="section-name section-four" for="tab4">中3</label>
+					  <div class="section-content">
+
+					  </div>
+					</div>
+					<div class="section-">
+					  <input class="section-radio" id="tab5" name="tab" type="radio" value="n5" checked>
+					  <label class="section-name section-five" for="tab5">中2</label>
+					  <div class="section-content">
+
+					  </div>
+					</div>
+
+                    <div class="section-">
+                      <input class="section-radio" id="tab6" name="tab" type="radio" value="n6">
+                      <label class="section-name section-six" for="tab6">中1</label>
+                      <div class="section-content">
+
+                      </div>
+                    </div>
+	        	</div>
+		        <div id="main_container">
+		        	<div class="btn_container">
+			    		<img src="img/setting.png" id="setting_img">
+			            <img src="img/list.png" id="list_img">
+		        		<label id="info_label" class="info_label"></label>
+		        	</div>
+		        	<div id="mondai_container">
+		    		</div>
+		    		<ol id="kotae_container" type="1">
+		    			<li class="kotae_item">
+		    				<span id="kotae1" class="kotae_span"></span>
+		    			</li>
+		    			<li class="kotae_item">
+		    				<span id="kotae2" class="kotae_span"></span>
+		    			</li>
+		    			<li class="kotae_item">
+		    				<span id="kotae3" class="kotae_span"></span>
+		    			</li>
+		    			<li class="kotae_item">
+		    				<span id="kotae4" class="kotae_span"></span>
+		    			</li>
+		    		</ol>
+	    			<div class="kotae_input_container" id="kotae_input_container">
+			        	<input type="text" id="kotae_input" class="search_input" placeholder="答えを入力">
+	    			</div>
+		    		<div id="helpdiv" style="display: none;" class="warpdiv">
+		    			<div class="search_container">
+				        	<input type="text" id="search_input" class="search_input" placeholder="Search">
+		    			</div>
+		    			<div id="helpcontainer" class="warpcontainer">
+		    
+		    			</div>
+		    		</div>
+		    		<div id="optdiv" style="display: none;" class="warpdiv">
+		    			<div id="optcontainer" class="warpcontainer">
+		    				<div>
+		    					<label>回答の方法</label><select id="kotae_houhou">
+									<option value="select">４択</option>
+									<option value="input">入力 (上級)</option>
+								</select>  
+		    				</div>
+		    				<div>
+		    					<label class="opt_checkbox"><input type="checkbox" class="opt_checkbox"  id="random_checkbox"> Random Questions </label>
+		    				</div>
+		    				<div>
+		    					<label class="opt_checkbox"><input type="checkbox" class="opt_checkbox"  id="rmanswer_checkbox" checked=""> 未回答、間違った問題を出題 </label>
+		    				</div>
+		    				<div>
+		    					<label class="opt_checkbox" style="display:none"><input type="checkbox" class="opt_checkbox"  id="tts_checkbox"> Text to Speech </label>
+		    				</div>
+		    				<div>
+		    					<label class="opt_checkbox" style="display:none"><input type="checkbox" class="opt_checkbox"  id="sr_checkbox"> Speech Recognition </label>
+		    				</div>
+		    				<div>
+		    					<label class="opt_checkbox"><input type="checkbox" class="opt_checkbox"  id="sound_checkbox" checked=""> 音 </label>
+		    				</div>
+		    			</div>
+		    		</div>
+		    		<audio id="seikai_sound" src="mp3/seikai.mp3"></audio>
+		    		<audio id="matigai_sound" src="mp3/matigai.mp3"></audio>
+		    	</div>        
+	      </ons-page>
+	    </ons-template>
+	    <ons-template id="tab2.html">
+	      <ons-page>
+	      </ons-page>
+	    </ons-template>
+	    <ons-template id="tab3.html">
+	      <ons-page>
+	      </ons-page>
+	    </ons-template>
+	    <ons-template id="tab4.html">
+	      <ons-page>
+	      </ons-page>
+	    </ons-template>
+    	<div id="loadingModal" class="modalDialog">
+			<span class="circles"></span>
+		</div>	
+    </body>
+</html>
