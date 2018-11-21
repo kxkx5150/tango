@@ -608,9 +608,10 @@ hr{
   left: 3%;
   box-sizing: border-box;
 }
-#kotae_houhou{
-  height: 38px;
-  width: 90px;
+#kotae_houhou {
+    font-size: 18px;
+    height: 40px;
+    width: 135px;
 }
 .kotae_input_container{
    display: none;
