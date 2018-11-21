@@ -111,7 +111,11 @@ function resizeWindow(e,loadflg){
         var cont = document.getElementById('mondai_container');
         var kcont = document.getElementById('kotae_container');
         var icont = document.getElementById('kotae_input_container');
-        cont.style.height = ch*4+"px";
+        if(optobj.mode === "input"){
+            cont.style.height = "138px";
+        }else{
+            cont.style.height = ch*4+"px";
+        }
         kcont.style.height = ch*8+"px";
         icont.style.height = ch*8+"px";
         document.getElementById("main_container").style.width = window.innerWidth+"px";
@@ -386,6 +390,7 @@ function changeKotaeMode(inptflg){
         kcont.style.display = "block";
         optobj.mode = "select";
     }
+    resizeWindow();
     storeOptions();
 }
 function checkKotaeInput(val){
