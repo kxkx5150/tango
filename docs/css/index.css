@@ -1111,7 +1111,10 @@ svg{
   margin-left: 16px;
 }
 #show_seikai{
-  font-size: 17px;
-  padding: 6px;
-  border-radius: 8px;
+    font-size: 17px;
+    padding: 6px;
+    border-radius: 8px;
+    color: deeppink;
+    background: transparent;
+    border-color: deeppink;
 }
