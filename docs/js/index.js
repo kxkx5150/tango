@@ -278,21 +278,21 @@ function addEvent(){
             that.style.display = "none";
         },300)
     },false);   
-    // document.getElementById("tab1").addEventListener("change",function(){
-    //     if(this.checked){
-    //         changeLevel(true,this.id);
-    //     }
-    // });   
-    // document.getElementById("tab2").addEventListener("change",function(){
-    //     if(this.checked){
-    //         changeLevel(true,this.id);
-    //     }
-    // });   
-    // document.getElementById("tab3").addEventListener("change",function(){
-    //     if(this.checked){
-    //         changeLevel(true,this.id);
-    //     }
-    // });   
+    document.getElementById("tab1").addEventListener("change",function(){
+        if(this.checked){
+            changeLevel(true,this.id);
+        }
+    });   
+    document.getElementById("tab2").addEventListener("change",function(){
+        if(this.checked){
+            changeLevel(true,this.id);
+        }
+    });   
+    document.getElementById("tab3").addEventListener("change",function(){
+        if(this.checked){
+            changeLevel(true,this.id);
+        }
+    });   
     document.getElementById("tab4").addEventListener("change",function(){
         if(this.checked){
             changeLevel(true,this.id);
@@ -457,11 +457,11 @@ function checkOnaziKotae(val,mondai){
 }
 function changeLevel(e,id,loadflg){
     if(id === "tab1"){
-        Q = G6;
+        Q = G1;
     }else if(id === "tab2"){
-        Q = G6;
+        Q = G2;
     }else if(id === "tab3"){
-        Q = G6;
+        Q = G3;
     }else if(id === "tab4"){
         Q = G4;
     }else if(id === "tab5"){
